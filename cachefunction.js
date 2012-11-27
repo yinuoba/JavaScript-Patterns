@@ -10,4 +10,5 @@
 		}
 		return self.cache[param]
 	};
+	hoogle.cache = {}
 } ());	
