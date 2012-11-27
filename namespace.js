@@ -22,6 +22,6 @@
 	};
 
 	var module2 = MYAPP.namespace('MYAPP.modules.module2');
-	module2 === MYAPP.modules.module2; // true
+	module2 === MYAPP.modules.module2;  // true
 
 })();

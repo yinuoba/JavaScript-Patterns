@@ -12,3 +12,4 @@ some demos about JavaScript patterns
 * typicalapp.js  tom大叔曾经在博客上给出的几个经典题目
 * curry.js  函数的curry化
 * namespace.js  命名空间函数
+* sandbox.js  沙箱模式
