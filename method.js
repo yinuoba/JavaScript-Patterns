@@ -5,12 +5,14 @@
 	 * @param  {Function} callback 方法的定义
 	 * @return {Function} return this  提供链式调用
 	 */
-	Function.prototype.method = function(name, callback) {
-		// 在当前function上扩展name方法
-		this.prototype[name] = callback;
-		// 便于method方法的链式调用
-		return this
-	};
+	if(typeof Function.prototype.method !== 'function'){
+		Function.prototype.method = function(name, callback) {
+			// 在当前function上扩展name方法
+			this.prototype[name] = callback;
+			// 便于method方法的链式调用
+			return this
+		}
+	}
 
 	// method方法的运用
 	var Hoogle = function() {
