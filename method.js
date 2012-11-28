@@ -16,7 +16,8 @@
 
 	// method方法的运用
 	var Hoogle = function() {
-			this.name = "Hoogle", this.major = "F2E"
+			this.name = "Hoogle", 
+			this.major = "F2E"
 		};
 
 	// 扩展hoogle构造函数上的原型方法
@@ -30,7 +31,7 @@
 	}).method("setMajor", function(newmajor) {
 		this.major = newmajor;
 		return this
-	})
+	});
 
 	// 实例化Hoogle
 	var hoogle = new Hoogle();
