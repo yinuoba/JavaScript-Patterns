@@ -13,3 +13,4 @@ some demos about JavaScript patterns
 * curry.js  函数的curry化
 * namespace.js  命名空间函数
 * sandbox.js  沙箱模式
+* method.js  在Function对象上扩展method方法，从而更方便地扩展原型方法
