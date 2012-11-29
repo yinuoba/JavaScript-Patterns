@@ -21,7 +21,7 @@
 	};
 	var a = new ClassA();
 	ClassB.prototype = ClassA.prototype;
-	console.info(a instanceof ClassB); // true
+	console.info(a instanceof ClassB); // true 欺骗成功
 
 	// 以上摘自winter-cn的博客：http://www.cnblogs.com/winter-cn/archive/2009/12/07/1618281.html
 })();

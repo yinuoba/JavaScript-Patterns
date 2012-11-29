@@ -15,3 +15,4 @@ some demos about JavaScript patterns
 * sandbox.js  沙箱模式
 * method.js  在Function对象上扩展method方法，从而更方便地扩展原型方法
 * instanceof.js  instanceof操作符的实质，及instanceof欺骗
+* inherit.js  各种继承
