@@ -76,7 +76,6 @@
 	};
 
 
-
 	// 运用沙箱 1
 	new Sandbox(function(box) {
 		console.info(box)
