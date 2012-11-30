@@ -13,12 +13,13 @@
 		 * @return {[type]}   [description]
 		 */
 		function inherit(Child, Parent) {
-			Child.prototype = new Parent();
+			Child.prototype = new Parent()
 		}
 
 		// 定义构造函数Parent
 		var Parent = function(name, major) {
-				this.name = name || 'Hoogle', this.major = major || 'F2E'
+				this.name = name || 'Hoogle';
+				this.major = major || 'F2E'
 			};
 
 		// 扩展构造函数Parent
@@ -79,7 +80,6 @@
 		var child = new Child('yinuoba');
 		console.info(child.name);	// 输出yinuoba
 		console.info(typeof child.getName);	// undefined，说明这种方式不能继承prototype原型对象上的属性
-
 	}());
 
 })();
