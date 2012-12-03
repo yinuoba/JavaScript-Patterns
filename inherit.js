@@ -82,4 +82,100 @@
 		console.info(typeof child.getName);	// undefined，说明这种方式不能继承prototype原型对象上的属性
 	}());
 
+
+	/**
+	 * 共享原型
+	 * 通过将可复用成员全部移到prototype原型对象中，而不放在this属性中
+	 * 一个缺点就是一旦某个实例修改了原有原型，父对象上原型也会被修改
+	 */
+	;(function(){
+		// 定义共享原型方法
+		function inherit(Child, Parent) {
+			Child.prototype = Parent.prototype;
+		}
+
+		// 定义父构造函数并扩展原型
+		var Parent = function(name) {
+			this.name = name || 'Hoogle'
+		};
+		Parent.prototype = {
+			constructor: Parent,
+			getName: function() {
+				return this.name
+			},
+			major: "F2E"
+		};
+
+		// 定义子构造函数
+		var Child = function() {};
+
+		// 实现子构造函数共享父构造函数原型
+		inherit(Child, Parent);
+
+		// 实例化子构造函数并观察其属性和原型
+		var child = new Child("newName");
+		console.dir(child);
+
+		// 通过Child更改原型上major属性的值
+		Child.prototype.major = "JavaScript"
+
+		// 更改原型后，再看父子对象，发现父子对象上的major属性值同时被改为了"JavaScript"
+		var parent = new Parent();
+		var child = new Child();
+		console.dir(parent);
+		console.dir(child);
+
+	})();
+
+
+	/**
+	 * 临时构造函数
+	 * 让子构造函数修改原型后，父对象上的原型不会收到影响
+	 * 并且将扶对象的原型存储在uber属性上，Child的constructor指向自身，维护原型链关系
+	 */
+	;(function() {
+		// 定义临时构造函数方法
+		function inherit(Child, Parent) {
+			var F = function() {};
+			F.prototype = Parent.prototype;
+			Child.prototype = new F();
+			// 存储超类
+			Child.uber = Parent.prototype;
+			// 将Child原型的constructor指向Child
+			Child.prototype.constructor = Child;
+		}
+
+		// 定义父构造函数并扩展原型
+		var Parent = function(name) {
+			this.name = name || 'Hoogle'
+		};
+		Parent.prototype = {
+			constructor: Parent,
+			getName: function() {
+				return this.name
+			},
+			major: "F2E"
+		};
+
+		// 定义子构造函数
+		var Child = function() {};
+
+		// 实现子构造函数共享父构造函数原型
+		inherit(Child, Parent);
+
+		// 实例化子构造函数并观察其属性和原型
+		var child = new Child("newName");
+		console.dir(child);
+
+		// 通过Child更改原型上major属性的值
+		Child.prototype.major = "JavaScript"
+
+		// 更改原型后，再看父子对象，发现只有child上的major属性被更改过，parent没有变
+		var parent = new Parent();
+		var child = new Child();
+		console.dir(parent);
+		console.dir(child);
+
+	})();
+
 })();
