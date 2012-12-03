@@ -66,4 +66,8 @@ some demos about JavaScript patterns
 		<td>bind.js</td>
 		<td>bind方法的实现</td>
 	</tr>
+	<tr>
+		<td>factory.js</td>
+		<td>工厂模式</td>
+	</tr>
 </table>
