@@ -15,4 +15,6 @@ some demos about JavaScript patterns
 * sandbox.js  沙箱模式
 * method.js  在Function对象上扩展method方法，从而更方便地扩展原型方法
 * instanceof.js  instanceof操作符的实质，及instanceof欺骗
-* inherit.js  各种继承
+* inherit.js  各种继承，包括类式继承、原型继承、复制继承（extend）
+* mixobj.js  混入模式，将多个对象连接起来
+* typeof.js  各种数据类型的typeof值
