@@ -70,4 +70,8 @@ some demos about JavaScript patterns
 		<td>factory.js</td>
 		<td>工厂模式</td>
 	</tr>
+	<tr>
+		<td>commonPattern.js</td>
+		<td>写UI组建常用模式</td>
+	</tr>
 </table>
