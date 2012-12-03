@@ -18,3 +18,4 @@ some demos about JavaScript patterns
 * inherit.js  各种继承，包括类式继承、原型继承、复制继承（extend）
 * mixobj.js  混入模式，将多个对象连接起来
 * typeof.js  各种数据类型的typeof值
+* bind.js  bind方法的实现
