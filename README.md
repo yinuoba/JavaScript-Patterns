@@ -4,21 +4,6 @@ JavaScript-Patterns
 some demos about JavaScript patterns
 
 ## 文件简介
-* singleton.js  单体模式
-* runobject.js  即时对象模式,可直接调用对象内部的方法
-* newobject.js  实例化构造函数的全过程
-* initbranches.js  初始化分支是一种优化模式，当知道某个条件在整个生命周期内都不会发生变化时，仅对该条件测试一次。
-* cachefunction.js  备忘模式 让复杂的操作缓存在函数的属性中，从而只需要执行一遍。
-* typicalapp.js  tom大叔曾经在博客上给出的几个经典题目
-* curry.js  函数的curry化
-* namespace.js  命名空间函数
-* sandbox.js  沙箱模式
-* method.js  在Function对象上扩展method方法，从而更方便地扩展原型方法
-* instanceof.js  instanceof操作符的实质，及instanceof欺骗
-* inherit.js  各种继承，包括类式继承、原型继承、复制继承（extend）
-* mixobj.js  混入模式，将多个对象连接起来
-* typeof.js  各种数据类型的typeof值
-* bind.js  bind方法的实现
 
 <table>
 	<tr>
