@@ -38,7 +38,7 @@
 		// 让Child继承Parent
 		inherit(Child, Parent);
 
-		console.info(Child); // this属性和原型方法均在Child的prototype属性上了
+		console.dir(Child); // this属性和原型方法均在Child的prototype属性上了
 		
 		// 实例化Child，看Child是否继承成功
 		var child1 = new Child();
