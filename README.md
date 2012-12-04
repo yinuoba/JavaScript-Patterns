@@ -72,6 +72,6 @@ some demos about JavaScript patterns
 	</tr>
 	<tr>
 		<td>commonPattern.js</td>
-		<td>写UI组建常用模式</td>
+		<td>UI组建常用模式</td>
 	</tr>
 </table>
