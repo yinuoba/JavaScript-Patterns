@@ -74,4 +74,8 @@ some demos about JavaScript patterns
 		<td>commonPattern.js</td>
 		<td>UI组建常用模式</td>
 	</tr>
+	<tr>
+		<td>runfunction.js</td>
+		<td>让函数执行的各种方式</td>
+	</tr>
 </table>
