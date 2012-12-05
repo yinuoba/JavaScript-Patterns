@@ -5,10 +5,10 @@
 	 */
 	Function.prototype.bind = function(obj) {
 		if(typeof Function.prototype.bind === 'function'){
+			if (arguments.length < 2 && FS.isUndefined(arguments[0])) return this;
 			var fn = this,
 				slice = Array.prototype.slice,
 				args = slice.call(arguments, 1);
-
 			// 返回一function，以obj为this，bind中传入的参数加上当前function中参数为参数
 			return function(){
 				// 后面继续连上arguments，给返回的function传入参数
